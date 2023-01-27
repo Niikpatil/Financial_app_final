@@ -1,0 +1,35 @@
+ion-content {
+  background-color: rgb(217, 205, 189);
+}
+
+ion-card {
+  margin: 15% 20px;
+  // display: flex;
+  // align-items: flex-end;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+ion-col {
+  margin: 2%;
+  text-align: center;
+}
+
+ion-icon {
+  padding: 2px;
+  border: solid 1px #fff;
+  color: #fff;
+  background-color: #6271d5;
+  border-radius: 50%;
+}
+
+div.item {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+}
+
+.caption {
+  display: block;
+}
