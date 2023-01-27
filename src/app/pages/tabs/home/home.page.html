@@ -28,43 +28,57 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-button
-          shape="round"
-          size="default"
-          id="open-custom-dialog"
-          expand="block"
-        >
+        <ion-button shape="round" size="default" id="scan_qr" expand="block">
           <b> QR Scan </b>
         </ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="secondary" shape="round" size="default">
+        <ion-button
+          color="secondary"
+          shape="round"
+          id="Acc_info"
+          size="default"
+        >
           <b> Account </b>
         </ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="danger" shape="round" size="default">
+        <ion-button color="danger" shape="round" id="Pay_remind" size="default">
           <b> Pay User </b>
         </ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="medium" shape="round" size="default">
+        <ion-button color="medium" shape="round" id="pay_demand" size="default">
           <b> Pay Req </b>
         </ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <!-- Models -->
+  <!-- Scan QR Models -->
 
-  <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+  <ion-modal id="example-modal" #modal trigger="scan_qr">
+    <ng-template>
+      <div align="center" class="wrapper">
+        <h1>Scan QR</h1>
+        <ion-list lines="none">
+          <ion-item button="true" detail="false" (click)="modal.dismiss()">
+            <h3></h3>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+  <!-- Account Details Models -->
+  <ion-modal id="example-modal" #modal trigger="Acc_info">
     <ng-template>
       <div align="center" class="wrapper">
         <h1>Scan QR</h1>
         <ion-list lines="none">
           <ion-item button="true" detail="false" (click)="modal.dismiss()">
             <h3>
-              <img alt="Scan QR" src="../../../../assets/QR_Code.webp" />
+              <!-- <img alt="Scan QR" src="../../../../assets/QR_Code.webp" /> -->
             </h3>
           </ion-item>
         </ion-list>
@@ -72,14 +86,31 @@
     </ng-template>
   </ion-modal>
 
+  <!-- Payment Reminder Models -->
+  <ion-modal id="example-modal" #modal trigger="Pay_remind">
+    <ng-template>
+      <div align="center" class="wrapper">
+        <h1>Scan QR</h1>
+        <ion-list lines="none">
+          <ion-item button="true" detail="false" (click)="modal.dismiss()">
+            <h3>
+              <!-- <img alt="Scan QR" src="../../../../assets/QR_Code.webp" /> -->
+            </h3>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ng-template>
+  </ion-modal>
 
-
-
-  
-
-
-
-
-
-
+  <!-- Payment Request Models -->
+  <ion-modal id="example-modal" #modal trigger="pay_demand">
+    <ng-template>
+      <div align="center" class="wrapper">
+        <h1>Scan QR</h1>
+        <ion-list lines="none">
+          <h3>asafas</h3>
+        </ion-list>
+      </div>
+    </ng-template>
+  </ion-modal>
 </ion-content>
