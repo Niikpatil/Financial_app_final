@@ -1,12 +1,22 @@
 <ion-header>
-  <ion-segment color="primary" value="primary">
-    <ion-segment-button value="primary">
-      <ion-label>Login</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="segment">
-      <ion-label>Register</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <div class="t_buttons">
+    <ion-col>
+      <ion-button routerLink="/profile/login" color="secondary" shape="round">
+        <b> Login </b>
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button routerLink="/profile/signup" color="danger" shape="round">
+        <b> Sign Up </b>
+      </ion-button>
+    </ion-col>
+  </div>
+</ion-content>
+
+<router-outlet></router-outlet>

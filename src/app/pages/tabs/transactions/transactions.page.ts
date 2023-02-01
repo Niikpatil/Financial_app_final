@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { LoginPage } from '../../profile/login/login.page';
 
 @Component({
   selector: 'app-transactions',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./transactions.page.scss'],
 })
 export class TransactionsPage implements OnInit {
+  constructor(public uLogin: NavController) {}
 
-  constructor() { }
-
-  ngOnInit() {
+  userLogin() {
+    this.uLogin.navigateForward([LoginPage]);
   }
 
+  ngOnInit() {}
 }
