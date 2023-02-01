@@ -1,112 +1,155 @@
-<ion-header color="medium">
-  <ion-toolbar>
-    <ion-title mode="md">
-      <ion-label>
-        <ion-text color="tertiary">Welcome</ion-text>
-        <p>
-          <ion-text color="white"><strong>User Nikhil</strong></ion-text>
-        </p>
-      </ion-label>
-    </ion-title>
-    <ion-avatar size="large" slot="end">
-      <h1>
-        <ion-icon name="person-circle"></ion-icon>
-      </h1>
-    </ion-avatar>
-  </ion-toolbar>
-</ion-header>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>User Account</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item>
+        <ion-label>Profile</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Logout</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Help & Support</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Settings</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Feedback</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header color="medium">
+    <ion-toolbar>
+      <ion-title mode="md">
+        <ion-label>
+          <ion-text color="tertiary">Welcome</ion-text>
+          <p>
+            <ion-text color="white"><strong>User Nikhil</strong></ion-text>
+          </p>
+        </ion-label>
+      </ion-title>
 
-<ion-content>
-  <ion-card color="light">
-    <ion-card-header>
-      <ion-card-subtitle>Account Bal.</ion-card-subtitle>
-      <ion-card-title>$4000</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>Saving Account</ion-card-content>
-  </ion-card>
+      <ion-buttons slot="end">
+        <ion-menu-button>
+          <ion-avatar size="large">
+            <h1>
+              <ion-icon name="person-circle"></ion-icon>
+            </h1>
+          </ion-avatar>
+        </ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-button shape="round" size="default" id="scan_qr" expand="block">
-          <b> QR Scan </b>
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button
-          color="secondary"
-          shape="round"
-          id="Acc_info"
-          size="default"
-        >
-          <b> Account </b>
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="danger" shape="round" id="Pay_remind" size="default">
-          <b> Pay User </b>
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="medium" shape="round" id="pay_demand" size="default">
-          <b> Pay Req </b>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-content class="ion-padding">
+    <ion-card color="light">
+      <ion-card-header>
+        <ion-card-subtitle>Account Bal.</ion-card-subtitle>
+        <ion-card-title>$4000</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>Saving Account</ion-card-content>
+    </ion-card>
 
-  <!-- Scan QR Models -->
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button shape="round" size="default" id="scan_qr" expand="block">
+            <b> QR Scan </b>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button
+            color="secondary"
+            shape="round"
+            id="Acc_info"
+            size="default"
+          >
+            <b> Account </b>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button
+            color="danger"
+            shape="round"
+            id="Pay_remind"
+            size="default"
+          >
+            <b> Pay User </b>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button
+            color="medium"
+            shape="round"
+            id="pay_demand"
+            size="default"
+          >
+            <b> Pay Req </b>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-  <ion-modal id="example-modal" #modal trigger="scan_qr">
-    <ng-template>
-      <div align="center" class="wrapper">
-        <h1>Scan QR</h1>
-        <ion-list lines="none">
-          <ion-item button="true" detail="false" (click)="modal.dismiss()">
-            <img alt="Scan QR" src="../../../../assets/QR_Code.webp" />
-          </ion-item>
-        </ion-list>
-      </div>
-    </ng-template>
-  </ion-modal>
+    <!-- Scan QR Models -->
 
-  <!-- Account Details Models -->
-  <ion-modal id="example-modal" #modal trigger="Acc_info">
-    <ng-template>
-      <div align="center" class="wrapper">
-        <h2>Account</h2>
-        <ion-list lines="none">
-          <ion-item button="true" detail="false" (click)="modal.dismiss()">
-            <h3></h3>
-          </ion-item>
-        </ion-list>
-      </div>
-    </ng-template>
-  </ion-modal>
-
-  <!-- Payment Reminder Models -->
-  <ion-modal id="example-modal" #modal trigger="Pay_remind">
-    <ng-template>
-      <div align="center" class="wrapper">
-        <h2>Pay Reminder</h2>
-        <ion-list lines="none">
-          <ion-item button="true" detail="false" (click)="modal.dismiss()">
-            <h3>
+    <ion-modal id="example-modal" #modal trigger="scan_qr">
+      <ng-template>
+        <div align="center" class="wrapper">
+          <h1>Scan QR</h1>
+          <ion-list lines="none">
+            <ion-item button="true" detail="false" (click)="modal.dismiss()">
               <img alt="Scan QR" src="../../../../assets/QR_Code.webp" />
-            </h3>
-          </ion-item>
-        </ion-list>
-      </div>
-    </ng-template>
-  </ion-modal>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ng-template>
+    </ion-modal>
 
-  <!-- Payment Request Models -->
-  <ion-modal id="example-modal" #modal trigger="pay_demand">
-    <ng-template>
-      <div align="center" class="wrapper">
-        <h3>Payment Request</h3>
-        <ion-list lines="none"> </ion-list>
-      </div>
-    </ng-template>
-  </ion-modal>
-</ion-content>
+    <!-- Account Details Models -->
+    <ion-modal id="example-modal" #modal trigger="Acc_info">
+      <ng-template>
+        <div align="center" class="wrapper">
+          <h2>Account</h2>
+          <ion-list lines="none">
+            <ion-item button="true" detail="false" (click)="modal.dismiss()">
+              <h3></h3>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ng-template>
+    </ion-modal>
+
+    <!-- Payment Reminder Models -->
+    <ion-modal id="example-modal" #modal trigger="Pay_remind">
+      <ng-template>
+        <div align="center" class="wrapper">
+          <h2>Pay Reminder</h2>
+          <ion-list lines="none">
+            <ion-item button="true" detail="false" (click)="modal.dismiss()">
+              <h3>
+                <img alt="Scan QR" src="../../../../assets/QR_Code.webp" />
+              </h3>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ng-template>
+    </ion-modal>
+
+    <!-- Payment Request Models -->
+    <ion-modal id="example-modal" #modal trigger="pay_demand">
+      <ng-template>
+        <div align="center" class="wrapper">
+          <h3>Payment Request</h3>
+          <ion-list lines="none"> </ion-list>
+        </div>
+      </ng-template>
+    </ion-modal>
+  </ion-content>
+</div>
